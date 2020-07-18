@@ -14,7 +14,7 @@ from helpers import tratamento_descricoes
 
 # local do dataset https://www.kaggle.com/team-ai/spam-text-message-classification
 
-parent_path = Path('D:/Documentos/modelo-classificacao-spam')
+parent_path =  Path(__file__).parents[0]
 
 logger = logging.getLogger('model-spam')
 logger.setLevel(logging.INFO)

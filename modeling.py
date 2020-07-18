@@ -34,7 +34,7 @@ def tratamento_strings(text):
 
 dados['Message_tratada'] = dados['Message'].apply(tratamento_strings)
 
-logger.info('Divisão da base em treino e teste')
+logger.info('Divisão da base em treino e teste: 80% treino e 20% teste')
 features = dados['Message_tratada']
 target = dados['Category']
 
@@ -62,6 +62,6 @@ desempenho_model = precision_recall_fscore_support(y_test, model_test, average='
 
 logger.info('Precision/Recall/F-score do modelo NB na base de teste é: {resultado}'.format(resultado=desempenho_model))
 
-logger.info('Salvando o modelo')
+logger.info('Salvando o modelo treinando')
 filename = parent_path / 'model/spam-nb-model.pkl'
 pickle.dump(model, open(filename, 'wb'))

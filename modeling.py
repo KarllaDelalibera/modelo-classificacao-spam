@@ -51,7 +51,7 @@ x_train, x_test, y_train, y_test = train_test_split(features,
 logger.info('Criando pipeline para treino e teste do modelo')
 logger.info('Modelo considerado: Naive Bayes')
 pipeline_model_nb = Pipeline([
-    ('vect',TfidfVectorizer(ngram_range=(1, 1), analyzer='word')),
+    ('vect', TfidfVectorizer(ngram_range=(1, 1), analyzer='word')),
     ('modelo_nb', MultinomialNB())])
 
 logger.info('Treinando o modelo')

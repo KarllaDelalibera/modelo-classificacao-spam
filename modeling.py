@@ -24,7 +24,6 @@ logger.info('Aplicando tratamento/limpeza nos dados')
 dados.dropna(inplace=True)
 tratamento_texto = tratamento_descricoes.TratamentoTexto()
 
-
 def tratamento_strings(text):
     texto = str(text)
     texto = texto.lower()
@@ -32,7 +31,6 @@ def tratamento_strings(text):
     texto = tratamento_texto.remove_space(texto)
     texto = tratamento_texto.remove_space_duplicado(texto)
     return texto
-
 
 dados['Message_tratada'] = dados['Message'].apply(tratamento_strings)
 

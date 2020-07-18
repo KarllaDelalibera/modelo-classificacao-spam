@@ -12,9 +12,7 @@ from sklearn.pipeline import Pipeline
 from helpers import tratamento_descricoes
 
 
-# local do dataset https://www.kaggle.com/team-ai/spam-text-message-classification
-
-parent_path = Path(__file__).parents[0]
+parent_path = parent_path = Path(__file__).parents[0]
 
 logger = logging.getLogger('model-spam')
 logger.setLevel(logging.INFO)
@@ -44,14 +42,15 @@ target = dados['Category']
 
 x_train, x_test, y_train, y_test = train_test_split(features,
                                                     target,
-                                                    test_size=0.30,
+                                                    test_size=0.20,
                                                     random_state=10,
                                                     stratify=target)
 
 logger.info('Criando pipeline para treino e teste do modelo')
 logger.info('Modelo considerado: Naive Bayes')
 pipeline_model_nb = Pipeline([
-    ('vect', TfidfVectorizer(ngram_range=(1, 1), analyzer='word')),
+    ('vect', TfidfVectorizer(ngram_range=(1, 1),
+                             analyzer='word')),
     ('modelo_nb', MultinomialNB())])
 
 logger.info('Treinando o modelo')
@@ -61,9 +60,9 @@ logger.info('Aplicando modelo na base de teste')
 model_test = model.predict(x_test)
 
 logger.info('Verificando desempenho do modelo')
-resultado = precision_recall_fscore_support(y_test, model_test, average='macro')
+desempenho_model = precision_recall_fscore_support(y_test, model_test, average='macro')
 
-logger.info('Precision/Recall/F-score do modelo NB na base de teste é: {resultado}'.format(resultado=resultado))
+logger.info('Precision/Recall/F-score do modelo NB na base de teste é: {resultado}'.format(resultado=desempenho_model))
 
 logger.info('Salvando o modelo')
 filename = parent_path / 'model/spam-nb-model.pkl'

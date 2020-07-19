@@ -42,7 +42,7 @@ def main():
 
     elif page == "Predição":
         st.title("Prevendo se um e-mail é spam ou não")
-        user_input = title = st.text_input('Insira um trecho do e-mail', '')
+        user_input = st.text_input('Insira um trecho do e-mail', '')
         resul_predicao = predict_modelo(modelo, user_input)
         st.write('O e-mail é: {pred}, com probabilidade {prob}'.format(pred=resul_predicao[0],
                                                                        prob=resul_predicao[1]))

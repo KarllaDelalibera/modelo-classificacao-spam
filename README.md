@@ -20,7 +20,7 @@ No terminal, clone o projeto:
 git clone https://github.com/KarllaDelalibera/modelo-classificacao-spam.git
 ```
 
-Com o Python e requirements instalados, execute o seguinte comando no terminal:
+Com o Python e requirements instalados, e dentro da pasta modelo-classificacao-spam, execute o seguinte comando no terminal:
 
 ```
 streamlit run app.py

@@ -12,7 +12,7 @@ from sklearn.pipeline import Pipeline
 from helpers import tratamento_descricoes
 
 
-parent_path = parent_path = Path(__file__).parents[0]
+parent_path = Path(__file__).parents[0]
 
 logger = logging.getLogger('model-spam')
 logger.setLevel(logging.INFO)

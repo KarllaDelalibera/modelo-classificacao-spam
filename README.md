@@ -20,7 +20,7 @@ No terminal, clone o projeto:
 $ git clone https://github.com/KarllaDelalibera/modelo-classificacao-spam.git
 ```
 
-Dentro da pasta modelo-classificacao-spam, execute o seguinte comando no terminal:
+Dentro da pasta modelo-classificacao-spam, execute os seguintes comandos no terminal:
 
 ```bash
 $ python -m venv .venv

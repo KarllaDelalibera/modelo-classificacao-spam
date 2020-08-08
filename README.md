@@ -16,8 +16,8 @@ Para a modelagem desses dados foi utilizando o modelo de classificação Naive B
 
 No terminal, clone o projeto:
 
-```
-git clone https://github.com/KarllaDelalibera/modelo-classificacao-spam.git
+```bash
+$ git clone https://github.com/KarllaDelalibera/modelo-classificacao-spam.git
 ```
 
 Dentro da pasta modelo-classificacao-spam, execute o seguinte comando no terminal:

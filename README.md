@@ -22,7 +22,7 @@ git clone https://github.com/KarllaDelalibera/modelo-classificacao-spam.git
 
 Dentro da pasta modelo-classificacao-spam, execute o seguinte comando no terminal:
 
-```
+```bash
 $ python -m venv .venv
 $ source .venv/bin/activate
 $ pip install -r requirements.txt

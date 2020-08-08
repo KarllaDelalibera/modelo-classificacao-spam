@@ -20,8 +20,11 @@ No terminal, clone o projeto:
 git clone https://github.com/KarllaDelalibera/modelo-classificacao-spam.git
 ```
 
-Com o Python e requirements instalados, e dentro da pasta modelo-classificacao-spam, execute o seguinte comando no terminal:
+Dentro da pasta modelo-classificacao-spam, execute o seguinte comando no terminal:
 
 ```
-streamlit run app.py
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ pip install -r requirements.txt
+$ streamlit run app.py
 ```

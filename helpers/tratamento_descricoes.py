@@ -2,7 +2,7 @@ import re
 from unicodedata import normalize
 
 
-class TratamentoTexto():
+class TratamentoTexto:
     
     def remove_pontuacao(self, text):
         '''
@@ -30,4 +30,3 @@ class TratamentoTexto():
         '''
         sentence = " ".join(re.split("\s+", text, flags=re.UNICODE))
         return sentence    
-

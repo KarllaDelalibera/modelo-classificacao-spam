@@ -13,4 +13,4 @@ repos:
     rev: 3.8.1
     hooks:
     -   id: flake8
-        args: ['--ignore=E501']
+        args: ['--ignore=E501,W605']

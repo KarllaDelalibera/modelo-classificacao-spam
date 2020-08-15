@@ -3,18 +3,17 @@ from unicodedata import normalize
 
 
 class TratamentoTexto:
-
     def remove_pontuacao(self, text):
         """
         Remove pontuacao de uma string
         """
-        return re.sub(r'[^\w\s]', ' ', text)
+        return re.sub(r"[^\w\s]", " ", text)
 
     def remove_acentuacao(self, text):
         """
         Remove acentuacao de uma string
         """
-        return normalize('NFKD', text).encode('ASCII', 'ignore').decode('ASCII')
+        return normalize("NFKD", text).encode("ASCII", "ignore").decode("ASCII")
 
     def remove_space(self, text):
         """
@@ -28,5 +27,5 @@ class TratamentoTexto:
         """
         Remove espaços duplicados da string
         """
-        sentence = " ".join(re.split('\s+', text, flags=re.UNICODE))
+        sentence = " ".join(re.split("\s+", text, flags=re.UNICODE))
         return sentence
